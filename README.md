@@ -13,13 +13,13 @@ options:
   -h, --help  show this help message and exit
 ```
 
-# Example command
+### Example command
 ```bash
 # python3 domain_enum.py TARGET_DOMAIN_HERE
 python3 domain_enum.py google.com
 ```
 
-# Installation
+### Installation
 ```bash
 git clone https://github.com/dceit/domainenum
 cd domainenum
@@ -27,8 +27,8 @@ pip install -r requirements.txt
 python3 domain_enum.py
 ```
 
-# Images
+### Images
 ![Image of domain enum on Google](https://i.imgur.com/kaFkZ3R.png)
 
-# References
+### References
 [https://github.com/TheRook/subbrute](https://github.com/TheRook/subbrute)
