@@ -8,6 +8,9 @@ from rich.table import Table
 
 console = Console()
 
+# TODO: Add argument for "-a" [all] to display all results.
+# TODO: Add argument for "-t" [timeout] to change timeout wait.
+# TODO: Add argument for "-np" [no-ping] to stop http requests to server.
 parser = argparse.ArgumentParser(description = 'Enumeration tool for finding and requesting HTML response.')
 parser.add_argument('domain', help = 'Domain which you wish to scan.')
 
@@ -29,7 +32,6 @@ def getSubdomainTable(domain):
 
         foundDomains.append(record['domain'])
 
-        # TODO: Configurable timeout
         # TODO: Dynamic address schemas (http:// https://)
         try:
             response = requests.get(f'http://{record['domain']}', timeout=5)
