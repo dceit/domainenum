@@ -38,6 +38,7 @@ def getSubdomainTable(domain):
             checksum = hashlib.md5(response.text.encode('utf-8')).hexdigest()
             testedDomain = record['domain']
             status = response.status_code
+
             responseLength = len(response.text)
 
             console.print(f'[bold yellow][Hit][/bold yellow] {checksum} - {testedDomain} - {status} - Response Length: {responseLength}')
@@ -47,8 +48,8 @@ def getSubdomainTable(domain):
 def main(args):
     console.print('[bold green][Begin][/bold green] Subdomain enumeration starting.')
 
-    isValidDomain = validators.domain(args.domain)
-    subdomainTable = getSubdomainTable(args.domain)
+    validators.domain(args.domain)
+    getSubdomainTable(args.domain)
 
     console.print('[bold green][Success][/bold green] Subdomain enumeration complete.')
 
