@@ -12,7 +12,7 @@ console = Console()
 # TODO: Add argument for "-np" [no-ping] to stop http requests to server.
 parser = argparse.ArgumentParser(description = 'Enumeration tool for finding and requesting HTML response.')
 parser.add_argument('domain', help = 'Domain which you wish to scan.')
-parser.add_argument('-a', help = 'Display all information, no-ping by default.', action = 'store_true')
+parser.add_argument('-a', '--all', help = 'Display all information, no-ping by default.', action = 'store_true')
 
 def getSubdomainTable(domain):
     foundDomains = []
