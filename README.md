@@ -2,16 +2,18 @@
 
 A basic tool inspired by Sublist3r / subbrute specifically designed for my wildcard* scope bug-bounty needs. Quickly identify unique subdomains, their response codes, and the length of their response.
 ```
-usage: domain_enum.py [-h] [-a] domain
+usage: domain_enum.py [-h] [-a] [-t TIMEOUT] domain
 
 Enumeration tool for finding and requesting HTML response.
 
 positional arguments:
-  domain      Domain which you wish to scan.
+  domain                Domain which you wish to scan.
 
 options:
-  -h, --help  show this help message and exit
-  -a          Display all information, no-ping by default.
+  -h, --help            show this help message and exit
+  -a, --all             Display all information, no-ping by default.
+  -t, --timeout TIMEOUT
+                        Time for subdomain to respond (seconds), default is 5
 ```
 
 ### Example command
